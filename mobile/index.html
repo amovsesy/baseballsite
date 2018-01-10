@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<title>Mad Dogs</title>
+<link rel="stylesheet" href="css/jquery.mobile-1.0.min.css" />
+<style>
+.ui-page {
+  -webkit-backface-visibility: hidden;
+}
+</style>
+<script src="js/jquery.js"></script>
+<script>
+	function getContacts(){
+		var serverUrl = "/mobile/services/players.php";
+		$.getJSON(serverUrl, function(data){
+			$("#playerlist").remove();
+			var playerList = $("<ul>").attr('id', 'playerlist');
+			$.each(data, function(index, value){
+				var listItem = $("<li>");
+				var name = value.firstname + " ";
+				if (value.nickname){
+					name += "(" + value.nickname + ") ";
+				}
+		
+				name += value.lastname;
+				listItem.html(name);
+				
+				var dataList = $("<ul>");
+				$("<li>").appendTo(dataList).html("Name: " + name);
+				$("<a>").appendTo($("<li>").appendTo(dataList)).html("Email: " + value.email).attr('href', 'mailto:' + value.email);
+				
+				if(value.phone){
+					$("<a>").appendTo($("<li>").appendTo(dataList)).html("Call:" + value.phone).attr('href', 'tel:' + value.phone);
+					$("<a>").appendTo($("<li>").appendTo(dataList)).html("Text:" + value.phone).attr('href', 'sms:' + value.phone);
+				}
+				
+				dataList.appendTo(listItem);
+				
+				listItem.appendTo(playerList);
+			});
+			
+			playerList.appendTo("#curPlayers").listview();
+		});
+	}
+	
+	function getGames(){
+		var serverUrl = "/mobile/services/games.php";
+		$.getJSON(serverUrl, function(data){
+			if(data.toString().length > 0) {
+				$("#gamelist").remove();
+				var gameList = $("<ul>").attr('id', 'gamelist');
+				$.each(data, function(index, value){
+					var listItem = $("<li>");
+					
+					if(value.type == "preseason"){
+						listItem.attr("data-theme", "b");
+					} else if(value.type == "postseason"){
+						listItem.attr("data-theme", "e");
+					}
+					
+					var gameHeader = value.opponent + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(" + value.date + "&nbsp;&nbsp;&nbsp;&nbsp;" + value.time + ")";
+					listItem.html(gameHeader);
+					
+					var dataList = $("<ul>");
+					$("<li>").appendTo(dataList).html("Opponent: " + value.opponent);
+					$("<li>").appendTo(dataList).html("Date: " + value.date);
+					$("<li>").appendTo(dataList).html("Time: " + value.time);
+					$("<li>").appendTo(dataList).html("Field: " + value.field);
+					if (value.address) {
+						$("<a>").appendTo($("<li>").appendTo(dataList)).html("Address: " + value.address).attr('href', "http://maps.google.com/maps?q=" + value.address.replace(", ", "+").replace(" ", "+").replace(",", "+"));
+					}
+				
+				  dataList.appendTo(listItem);
+					
+					listItem.appendTo(gameList);
+				});
+				gameList.appendTo("#upcomingGames").listview();
+			} else {
+				$("<p>").html("No upcoming games").appendTo("#upcomingGames");
+			}
+		});
+	}
+	
+	$("#games").live("pageinit", function(){
+		getGames();
+	});
+	
+	$("#players").live("pageinit", function(){
+		getContacts();
+	});
+	
+	$(document).bind("mobileinit", function(){
+		$.mobile.defaultPageTransition = 'fade';
+		$.mobile.page.prototype.options.addBackBtn = true;
+	});
+	
+	$('div[data-role="page"]').live('pagebeforehide', function(event, ui){
+	  var page = ui.nextPage;
+	  if(page.attr('id') == "games") {
+	    getGames();
+	  } else if (page.attr('id') == "players") {
+		getContacts();
+	  }
+    });
+</script>
+<script src="js/jquery.mobile-1.0.min.js"></script>
+</head>
+
+<body>
+<div data-role="page" id="games" data-add-back-btn="false">
+
+	<div data-role="header" data-position="fixed">
+        <h1 class="ui-title" tabindex="0" role="heading" aria-level="1">Games</h1>
+	</div>
+
+	<div data-role="content" id="upcomingGames">
+	</div>
+    
+    <div data-role="footer" data-position="fixed">
+    	<div data-role="navbar">
+        	<ul>
+            	<li><a href="#" class="ui-btn-active ui-state-persist">Games</a></li>
+            	<li><a href="#players">Players</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="players" data-add-back-btn="false">
+
+	<div data-role="header" data-position="fixed">
+        <h1 class="ui-title" tabindex="0" role="heading" aria-level="1">Players</h1>
+	</div>
+
+	<div data-role="content" id="curPlayers">
+	</div>
+    
+    <div data-role="footer" data-position="fixed">
+    	<div data-role="navbar">
+        	<ul>
+            	<li><a href="#games">Games</a></li>
+            	<li><a href="#" class="ui-btn-active ui-state-persist">Players</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
