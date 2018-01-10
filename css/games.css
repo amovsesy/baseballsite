@@ -1,0 +1,36 @@
+@CHARSET "ISO-8859-1";
+
+#actionscontainer {
+	width: 950px;
+}
+
+#actions p {
+	clear: both;
+	padding-bottom: 2px;
+}
+
+input.btn-action {
+	float: right;
+}
+
+#gamescontainer { 
+	height: 400px; 
+}
+
+div.results, div.upcoming {
+	height: 400px;
+}
+
+div.changePage p {
+	width: 425px;
+	padding-top: 5px;
+	text-align: right;
+	float: right;
+}
+
+div.changePage p.prev {
+	width: 425px;
+	padding-top: 5px;
+	text-align: left;
+	float: left;
+}

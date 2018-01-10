@@ -1,0 +1,19 @@
+@CHARSET "ISO-8859-1";
+#contents img {
+	max-height: 150px;
+	max-width: 150px;
+	padding: 10px;
+}
+
+#actions {
+	width: 950px;
+	margin-bottom: 30px;
+}
+
+#actions input {
+	float: right;
+}
+
+#pics {
+	clear: both;
+}

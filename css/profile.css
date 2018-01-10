@@ -1,0 +1,65 @@
+@CHARSET "ISO-8859-1";
+
+#edit {
+	float: right;
+}
+
+#edit input {
+	float: right;
+}
+
+#picture {
+	clear: both;
+}
+
+#picture img {
+	max-height: 100px;
+	max-width: 100px;
+}
+
+#info {
+	margin-top: 15px;
+	clear: both;
+	font-size: 18px;
+}
+
+#info label {
+	font-size: 21px;
+	font-weight: bold;
+}
+
+#info li {
+	margin: 5px 0;
+}
+
+#infoLeft {
+	float: left;
+	width: 300px;
+}
+
+#infoRight {
+}
+
+#stats table {
+	width: auto;
+	border-collapse: none;
+	margin-top: 10px;
+}
+
+#stats table th {
+	padding: 10px;
+	border: none;
+}
+
+#stats table td {
+	padding: 10px;
+	border: none;
+}
+
+#playerstats { 
+	height: 210px; 
+}
+
+div.season, div.career, div.postseason, div.postcareer {
+	height: auto;
+}

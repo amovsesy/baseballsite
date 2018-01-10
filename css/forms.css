@@ -1,0 +1,307 @@
+
+/* Structural Elements */
+.standard-form ul {
+    margin: 10px 0 0;
+    list-style-type: none;
+}
+
+.standard-form ul ul, .standard-form .fieldgroup {
+    margin: 0 0 0 195px;
+    _margin-left: 198px;
+}
+
+.standard-form fieldset.details ul {
+    margin: 0;
+}
+
+.standard-form li, .standard-form fieldset.details li {
+    margin-bottom: 10px;
+    zoom: 1;
+}
+
+.standard-form li:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.standard-form li li, .standard-form fieldset.details li li {
+    margin-bottom: 0;
+}
+
+.standard-form fieldset.details li input, .standard-form fieldset.details li select {
+    margin-left: 20px;
+}
+
+#main .standard-form .last {
+    margin-bottom: 0;
+    background-image: none;
+}
+
+/* Standard Full Page Layout
+ Default form element treatments for both full page and two-column layout.
+ */
+.standard-form {
+    margin: 20px 40px;
+}
+
+.standard-form fieldset {
+    background: url(http://www.linkedin.com/img/bg/bg_border_dotted_blue_2x1.png) 0 0 repeat-x;
+    *background-position: 0 1em;
+}
+
+.standard-form li fieldset {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.standard-form fieldset.details {
+    background: #ebebeb;
+    padding: 10px;
+    margin: 10px 0 0 195px;
+    _margin-left: 198px;
+}
+
+.standard-form fieldset fieldset.details, .standard-form .fieldgroup fieldset.details {
+    margin-left: 0;
+}
+
+.standard-form fieldset.details fieldset {
+    margin: 0;
+    padding: 0;
+}
+
+.standard-form legend {
+    font-size: 100%;
+    color: #007aab;
+    background-color: #fff;
+    padding-right: 10px;
+    *margin-left: -10px;
+    _margin-left:
+    -7px;
+}
+
+.standard-form label, .standard-form li fieldset legend span, .standard-form li fieldset.details fieldset legend {
+    font-size: 100%;
+    color: #333;
+    background-color: transparent;
+    font-weight: bold;
+    display: block;
+    float: left;
+    text-align: right;
+    width: 185px;
+    margin-right: 10px;
+}
+
+.standard-form li fieldset legend {
+    position: relative;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+}
+
+.standard-form li fieldset legend span {
+    font-size: 13px;
+    position: absolute;
+    *left: -7px;
+}
+
+.standard-form .optional label em, .standard-form .optional legend em {
+    font-weight: normal;
+    display: block;
+}
+
+.standard-form .required label em, .standard-form .required legend em {
+    color: #900;
+}
+
+.standard-form li fieldset.details legend {
+    display: none;
+}
+
+.standard-form li fieldset.details fieldset legend {
+    float: none;
+    text-align: left;
+    *margin-left: -10px;
+    _margin-left:
+    -7px;
+}
+
+.standard-form .fieldgroup.checkbox input {
+    float: left;
+}
+
+.standard-form .fieldgroup.checkbox p {
+    padding-left: 23px;
+    _margin-top: .5em;
+}
+
+.standard-form .fieldgroup.checkbox label, .standard-form label.checkbox {
+    font-weight: normal;
+    padding: 0;
+    width: auto;
+    display: inline;
+    float: none;
+    line-height: 1;
+    vertical-align: 2px;
+    text-align: left;
+}
+
+.standard-form .fieldgroup.checkbox label {
+    display: block;
+    padding: 4px 0 0 23px;
+    *padding-top: 0;
+    _padding-left:
+    20px;
+}
+
+.standard-form li fieldset label, .standard-form li fieldset.details fieldset label {
+    font-weight: normal;
+    float: none;
+    text-align: left;
+    line-height: 1;
+    width: auto;
+    margin-bottom: 0;
+}
+
+.standard-form li fieldset.details label, .standard-form li fieldset.details label, .standard-form li .checkbox fieldset.details label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.standard-form input, .standard-form select, .standard-form textarea {
+    font-size: 100%;
+}
+
+/* Text */
+.standard-form p {
+    margin-left: 195px;
+    _margin-left: 200px;
+    margin-top: .25em;
+    color: #000;
+}
+
+.standard-form p.instructions {
+    font-size: 100%;
+}
+
+.standard-form p.example, .standard-form p.tip, .standard-form p.note {
+    font-size: 100%;
+    color: #666;
+}
+
+.standard-form p.actions {
+    background: url(http://www.linkedin.com/img/bg/bg_grey_dotted_h-line_3x1.png) 0 0 repeat-x;
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 100%;
+}
+
+.standard-form p.actions input {
+    font-size: inherit;
+    *font-size: 100%;
+}
+
+.standard-form p.actions .alternate {
+    line-height: 2;
+}
+
+.standard-form p.key {
+    font-size: 100%;
+    color: #333;
+    margin-top: 15px;
+}
+
+.standard-form p.key strong {
+    vertical-align: top;
+    color: #900;
+    font-size: 100%;
+}
+
+.standard-form .error {
+    font-size: 100%;
+    color: #900;
+    font-weight: bold;
+}
+
+.standard-form p a:visited {
+    color: #039;
+}
+
+/* Two Column
+ When the form is contained in the #content container of two-column layout
+ */
+.standard-form.sided {
+    margin: 20px 10px 20px 20px;
+}
+
+.standard-form.sided ul ul, .standard-form.sided .fieldgroup {
+    margin-left: 100px;
+    _margin-left: 93px;
+}
+
+.standard-form.sided p {
+    margin-left: 105px;
+}
+
+.standard-form.sided fieldset.details {
+    margin-left: 95px;
+    _margin-left: 98px;
+}
+
+.standard-form.sided label, .standard-form.sided li fieldset legend span, .standard-form.sided li fieldset.details fieldset legend {
+    width: 95px;
+}
+
+.standard-form.sided fieldset.details, .standard-form.sided fieldset.details ul {
+    margin-left: 0;
+}
+
+/* Stacked Labels
+ */
+.standard-form.stacked {
+    margin: 0 10px;
+}
+
+.standard-form.stacked label, .standard-form.stacked li fieldset legend span {
+    float: none;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.standard-form.stacked li.required {
+    _padding-left: 10px;
+    _margin-left: -10px;
+}
+
+.standard-form.stacked li.required label, .standard-form.stacked li.required fieldset legend span {
+    margin-left: -10px;
+}
+
+.standard-form.stacked li.required fieldset label {
+    margin-left: inherit;
+    *margin-left: 0;
+}
+
+.standard-form.stacked li fieldset legend span {
+    position: static;
+    *position:relative;
+    * left: -7px;
+}
+
+.standard-form.stacked li.required input {
+    _margin-left: 0;
+}
+
+.standard-form.stacked li fieldset input { *margin-left:
+    0;
+}
+
+.standard-form.stacked ul ul, .standard-form.stacked .fieldgroup, .standard-form.stacked fieldset.details, .standard-form.stacked p, .standard-form .fieldgroup p {
+    margin-left: 0;
+}

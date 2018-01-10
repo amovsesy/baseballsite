@@ -1,0 +1,40 @@
+@CHARSET "ISO-8859-1";
+
+#actions {
+	float: right;
+}
+
+#boxscore {
+	width: 950px;
+	margin-top: 40px;
+}
+
+#boxscore p {
+	width: 650px;
+	margin: 0 auto;
+	margin-top: 5px;
+	font-weight: bold;
+}
+
+#boxscore table {
+	width: 650px;
+	margin: 0 auto;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+#boxscore table th {
+	padding: 1px;
+	font-weight: bold;
+	font-size: 16px;
+	border: 1px solid black;
+}
+
+#boxscore table td {
+	padding: 2px;
+	border: 1px solid black;
+}
+
+#stats ul.tabs {
+	width: 130px;
+}

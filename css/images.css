@@ -1,0 +1,5 @@
+@CHARSET "ISO-8859-1";
+img {
+	max-height: 200px;
+	max-width: 200px;
+}

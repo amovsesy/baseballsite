@@ -1,0 +1,11 @@
+@CHARSET "ISO-8859-1";
+
+#notice {
+	width: 950px;
+	font-size: 20px;
+}
+
+#notice span.note{
+	font-size: 22px;
+	font-weight: bold;
+}

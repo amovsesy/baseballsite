@@ -1,0 +1,32 @@
+@CHARSET "ISO-8859-1";
+
+table {
+	width: 800px;
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+
+table th{
+	border: 1px solid black;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 1px;
+}
+
+table td {
+	border: 1px solid black;
+	padding: 2px;
+}
+
+#actionscontainer {
+	width: 950px;
+}
+
+#actions {
+	float: right;
+}
+
+#fields {
+	clear: both;
+	margin-top: 50px;
+}

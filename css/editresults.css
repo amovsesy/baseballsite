@@ -1,0 +1,55 @@
+@CHARSET "ISO-8859-1";
+
+#boxscore {
+	width: 950px;
+	margin: 0 auto;
+	
+}
+
+#boxscore table {
+	display: inline;
+}
+
+#boxscore table th {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 3px;
+}
+
+#boxscore table td {
+	padding: 2px;
+}
+
+#actions {
+	text-align: right;
+	width: 950px;
+	margin-bottom: 20px;
+}
+
+#scores {
+	float: left;
+}
+
+#gameresults {
+	margin-top: 25px;
+}
+
+#gameresults table {
+	width: 950px;
+}
+
+#gameresults table th {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 3px;
+}
+
+#gameresults table td {
+	padding: 2px;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+}
+
+#pitching {
+	margin-top: 25px;
+}

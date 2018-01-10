@@ -1,0 +1,75 @@
+@CHARSET "ISO-8859-1";
+#pic img {
+	float: left;
+	max-width: 500px;
+	max-height: 450px;
+}
+
+#news {
+	width: 425px;
+	height: 400px;
+	float: right;
+	display: block;
+	overflow: auto;
+}
+
+#about {
+	width: 425px;
+	height: 400px;
+	float: right;
+	display: block;
+	overflow: auto;
+}
+
+#about h1 {
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#about p {
+	font-size: 20px;
+	padding-top: 10px;
+}
+
+#news ul.postlist {
+	list-style: none;
+}
+
+#news ul.postlist li.post {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 10px;
+	padding-top: 5px;
+}
+
+#news ul.postlist li.nonfirst {
+	border-top: 1px solid black;
+}
+
+#news .playernews {
+	float: left;
+	width: 75px;
+}
+
+#news .playernews img {
+	width: 40px;
+}
+
+#news .playernews p{
+	font-size: 10px;
+	margin-bottom: 1px;
+	margin-top: 1px;
+}
+
+#news .newspost {
+	width: 275px;
+}
+
+#news .postdate {
+	font-size: 12px;
+}
+
+#news .messagepost {
+}
+

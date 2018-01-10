@@ -1,0 +1,49 @@
+@CHARSET "ISO-8859-1";
+
+#topinfo {
+	margin-top: 20px;
+	height: 200px;	
+}
+
+#info {
+	float: left;
+	margin-top: 40px;
+}
+
+#directions {
+	float: right;
+	width: 400px;
+}
+
+#directions p {
+	font-size: 20px;
+	margin-left: 60px;
+}
+
+.btn-action {
+	float: right;
+	margin-right: 80px;
+}
+
+#info li {
+	font-size: 18px;	
+}
+
+#info label {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#map {
+	float: left;
+	width: 450px;
+	height: 330px;
+	margin-top: 15px;
+}
+
+#directionsPanel {
+	float: right;
+	width: 450px;
+	text-align: center;
+	height: 300px;
+}
